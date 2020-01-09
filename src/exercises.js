@@ -1,4 +1,7 @@
 function commonEnd(a, b) {
+  var a = [];
+  var b = [];
+  
   if (!a || a.length === 0 || !b || b.length === 0) {
     return false;
   }
