@@ -1,12 +1,16 @@
 function commonEnd(a, b) {
-  var a = [];
-  var b = [];
-  
+
   if (!a || a.length === 0 || !b || b.length === 0) {
     return false;
   }
 
   // write your code here
+  var a = [];
+  var b = [];
+
+  if(a[0] === b[0] || a[a.length - 1] === b[b.length - 1]) {
+    return true;
+  }
 }
 
 function endsMeet(values, n) {
