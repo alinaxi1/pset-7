@@ -5,16 +5,24 @@ function commonEnd(a, b) {
   }
 
   // write your code here
-  var a = [];
-  var b = [];
+  if (a.length < 1 || b.length <1) {
+    return false;
+  }
 
   if(a[0] === b[0] || a[a.length - 1] === b[b.length - 1]) {
     return true;
+  } else {
+    return false;
   }
 }
 
 function endsMeet(values, n) {
   // write your code here
+  if (!n || values === undefined || values.length < n) {
+    return [];
+  }
+
+  if ()
 }
 
 function difference(numbers) {
