@@ -21,10 +21,10 @@ function endsMeet(values, n) {
   if (!values||values.length < n||!Number.isInteger(n)||n < 0) {
      return [];
    } else {
-     values.slice(0, n);
-     values.slice(values.length - n, values.length);
+     let first = values[0];
+     let last = values[values.length - 1];
 
-     return combined.concat(combined2);
+     return [first, last];
    }
 }
 
