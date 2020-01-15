@@ -18,23 +18,51 @@ function commonEnd(a, b) {
 
 function endsMeet(values, n) {
   // write your code here
-  if (!n || values === undefined || values.length < n) {
-    return [];
-  }
+  if (!values||values.length < n||!Number.isInteger(n)||n < 0) {
+     return [];
+   } else {
+     values.slice(0, n);
+     values.slice(values.length - n, values.length);
 
-  if ()
+     return combined.concat(combined2);
+   }
 }
 
 function difference(numbers) {
   // write your code here
+  if (numbers == undefined||numbers < 1||numbers.some(isNaN)) {
+    return undefined;
+  } else {
+    let largest = Math.max.apply(Math, numbers);
+    let smallest = Math.min.apply(Math, numbers);
+    return largest - smallest;
+  }
 }
 
 function max(number) {
   // write your code here
+  if (number == undefined||number < 3||number.some(isNaN)||number.length % 2 == 0) {
+    return undefined;
+  } else {
+    let first = number[0];
+    let last = number[number.length -1];
+    let middle = number[Math.floor((number.length - 1) / 2)];
+    let elements = [first, middle, last];
+
+    return Math.max.apply(Math, elements);
+  }
 }
 
 function middle(values) {
   // write your code here
+  if (values == undefined||values.length < 3||values.length % 2 == 0) {
+    return [];
+  } else {
+    let middle1 = values [Math.floor((values.length - 1) / 2) - 1];
+    let middle2 = values[(values.length - 1) / 2];
+
+    return [middle1, middle2];
+  }
 }
 
 function increasing(numbers) {
