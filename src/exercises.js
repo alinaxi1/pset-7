@@ -18,14 +18,11 @@ function commonEnd(a, b) {
 
 function endsMeet(values, n) {
   // write your code here
-  if (!values||values.length < n||!Number.isInteger(n)||n < 0) {
-     return [];
-   } else {
-     let first = values[0];
-     let last = values[values.length - 1];
-
-     return [first, last];
-   }
+  if (!values || values.length < n || !Number.isInteger(n) || n < 0) {
+    return [];
+  } else {
+    
+  }
 }
 
 function difference(numbers) {
@@ -67,6 +64,11 @@ function middle(values) {
 
 function increasing(numbers) {
   // write your code here
+  if (numbers == undefined||numbers.length < 3||numbers.some(isNaN)||!Number.isInteger(numbers)) {
+    return false;
+  } else {
+
+  }
 }
 
 function everywhere(values, x) {
