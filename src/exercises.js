@@ -18,11 +18,24 @@ function commonEnd(a, b) {
 
 function endsMeet(values, n) {
   // write your code here
+  let array = [];
+
   if (!values || values.length < n || !Number.isInteger(n) || n < 0) {
-    return [];
+    return array;
   } else {
-    
-  }
+    if (n === 0) {
+      return values;
+    }
+
+      for (let i = 0; i < n; i++) {
+          array.push(values[i]);
+      }
+
+      for (let i = n; i > 0; i--) {
+          array.push(values[values.length - i]);
+      }
+      return array;
+    }
 }
 
 function difference(numbers) {
