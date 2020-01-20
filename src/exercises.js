@@ -91,25 +91,81 @@ function increasing(numbers) {
    return false;
 }
 
-
-
-
 function everywhere(values, x) {
   // write your code here
+  let result;
+  	if (!values || values.length < 1 || !x) {
+  		return false;
+  	}
 
+  	for (let i = 0; i < values.length; i++) {
+  		if (values[i] !== x) {
+  			if (values[i - 1] === x || values[i + 1] === x) {
+  				result = false;
+  			} else {
+  				return false;
+  			}
+  		}
+  	}
+  	return true;
 }
 
 function consecutive(numbers) {
   // write your code here
+  if (!numbers || numbers.length < 3 || numbers.some(isNaN) || Number.isInteger(numbers)) {
+    return false;
+  } else {
+    for (let i = 1; i < numbers.length; i++) {
+      if (numbers[i - 1] % 2 === 0 && numbers[i] % 2 === 0 && numbers[i + 1] % 2 === 0) {
+        return true;
+      } else if (numbers[i - 1] % 2 === 1 && numbers[i] % 2 === 1 && numbers[i + 1] % 2 === 1) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 function balance(numbers) {
   // write your code here
+  	let left = 0;
+  	let result;
+  	let right = 0;
+
+  	if (!numbers || numbers.some(isNaN) || Number.isInteger(numbers) || numbers.length < 2) {
+  		return false;
+  	}
+  	for (let i = 0; i < numbers.length; i++) {
+  		left = left + numbers[i];
+  	}
+  	let half = left / 2;
+  	if (left % 2 === 1) {
+  		return false;
+  	}
+  	for (let j = 0; j < numbers.length - 1; j++) {
+  		right = right + numbers[j];
+  		if (right === half) {
+  			return true;
+  		}
+  	}
+  	return false;
   console.log("test");
 }
 
 function clumps(values) {
   // write your code here
+  let count = 0;
+  if (!values) {
+    return -1;
+  } else {
+     for (let i = 0; i < values.length - 1; i++) {
+       if (values[i - 1] === values[i]) {
+      } else if (values[i] === values[i + 1]) {
+         count++;
+      }
+     }
+    return count;
+  }
 }
 
 /*
