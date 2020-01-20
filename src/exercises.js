@@ -77,15 +77,26 @@ function middle(values) {
 
 function increasing(numbers) {
   // write your code here
-  if (numbers == undefined||numbers.length < 3||numbers.some(isNaN)||!Number.isInteger(numbers)) {
-    return false;
-  } else {
-
-  }
+  if (!numbers || numbers.some(isNaN) || Number.isInteger(numbers) || numbers.length < 3) {
+     return undefined;
+   }
+   else {
+     for (let i = 1; i < numbers.length; i++) {
+       if ((numbers[i - 1] + 1) === numbers[i] && numbers[i + 1] - 1 === numbers[i]) {
+             return true;
+             break;
+       }
+     }
+   }
+   return false;
 }
+
+
+
 
 function everywhere(values, x) {
   // write your code here
+
 }
 
 function consecutive(numbers) {
